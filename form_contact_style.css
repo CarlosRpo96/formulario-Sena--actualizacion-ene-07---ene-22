@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+form {
+    background-color: #eeeded;
+    border: 5px solid #000000;
+    padding: 20px 0;
+    max-width: 50%;
+    height: 900px;
+    margin: auto;
+    margin-top: 150px;
+}
+.img {
+    width: 150px;
+    height: 150px;
+    display: grid;
+    margin: auto;
+    margin-top: 50px;
+}
+h2 {
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    font-size: xxx-large;
+}
+input {
+    width: 100%;
+    height: 85px;
+    box-sizing: border-box;
+    padding: 6px 12px;
+    font-size: xx-large;
+    border: 4px solid #000000;
+}
+.form_input {
+    padding: 6px 20px 20px;
+}
+.btn {
+    background-color: limegreen;
+    width: 180px;
+    height: 70px;
+    display: grid;
+    margin: auto;
+    font-size: xx-large;
+    margin-top: 70px;
+    padding: 12px;
+    font-weight: bold;
+}
