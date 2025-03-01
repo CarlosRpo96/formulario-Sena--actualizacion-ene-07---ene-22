@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/form_contact/form_contact_style.css">
+    <title>Formulario de Contacto</title>
+</head>
+<body>
+    <form action="" method="post">
+        <img src="/img/logoSena-removebg-preview.png" alt="" class="img">
+        <h2>Formulario de contacto</h2>
+        <div class="form_input">
+            <input type="text" id="nombre" placeholder="Nombre">
+        </div>
+        <div class="form_input">
+            <input type="text" id="cargo" placeholder="Cargo">
+        </div>
+        <div class="form_input">
+            <input type="email" id="email" placeholder="Email">
+        </div>
+        <div>
+            <button class="btn" type="button" id="btnContinuar">Continuar</button>
+        </div>
+    </form>
+
+    <script>
+        document.getElementById('btnContinuar').addEventListener('click', function () {
+            // Obtener los valores de los campos
+            const nombre = document.getElementById('nombre').value.trim();
+            const cargo = document.getElementById('cargo').value.trim();
+            const email = document.getElementById('email').value.trim();
+
+            // Validar que los campos no estén vacíos
+            if (nombre === '') {
+                alert('Por favor, ingresa tu nombre.');
+                return; // Detener la ejecución si el campo está vacío
+            }
+
+            if (cargo === '') {
+                alert('Por favor, ingresa tu cargo.');
+                return; // Detener la ejecución si el campo está vacío
+            }
+
+            if (email === '') {
+                alert('Por favor, ingresa tu email.');
+                return; // Detener la ejecución si el campo está vacío
+            }
+
+            // Validar el formato del email 
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Por favor, ingresa un email válido.');
+                return; // Detener la ejecución si el email no es válido
+            }
+
+            // redirigir al segundo formulario
+            window.location.href = 'http://127.0.0.1:5500/index/index.html';
+        });
+    </script>
+</body>
+</html>
